@@ -1,14 +1,21 @@
 import axios from 'axios';
 
 const api = axios.create({
-    // Ganti dengan URL Laravel kamu
-    baseURL: 'http://localhost:8000/api', 
+    // Mengambil URL dari .env lewat Vite
+    baseURL: import.meta.env.VITE_API_URL, 
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     }
 });
 
-// Jika kamu pakai token (Sanctum), tambahkan interceptor di sini nanti
+// Interceptor untuk menangani Token (Opsional tapi berguna)
+api.interceptors.request.use((config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
 
 export default api;

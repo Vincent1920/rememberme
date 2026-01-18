@@ -1,7 +1,5 @@
 <template>
-    <Navbar />
-
-    <AlertModal 
+ <AlertModal 
         :show="alertConfig.show" 
         :title="alertConfig.title" 
         :message="alertConfig.message"

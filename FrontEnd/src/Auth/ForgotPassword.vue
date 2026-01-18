@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <div class="container mx-auto px-4 py-12 flex flex-col items-center">
     <h1 class="font-kaushan text-4xl mb-8">Lupa Password</h1>
     <div class="w-full max-w-md bg-white p-8 rounded-3xl shadow-lg border">

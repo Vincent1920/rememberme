@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <div class="container mx-auto px-4 py-12 flex flex-col items-center min-h-screen">
     <h1 class="font-kaushan text-4xl text-gray-800 mb-8">Password Baru</h1>
     

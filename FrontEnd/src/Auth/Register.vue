@@ -1,5 +1,4 @@
 <template>
-    <Navbar />
 
     <AlertModal 
         :show="alertConfig.show" 
