@@ -1,16 +1,29 @@
 services:
-  app:
+  backend:
     build:
-      context: .
-      dockerfile: docker/php/Dockerfile
-    container_name: reminder-app
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    container_name: reminder-backend
+    ports:
+      - "8080:8080"
     volumes:
-      - .:/var/www/html
+      - ./BackEnd:/var/www/html
     depends_on:
       - db
     networks:
       - reminder
-
+  frontend:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+    container_name: reminder-frontend
+    ports:
+      - "3000:3000" 
+    volumes:
+      - ./FrontEnd:/app
+      - /app/node_modules 
+    networks:
+      - reminder
   nginx:
     image: nginx:alpine
     container_name: reminder-nginx
@@ -20,7 +33,7 @@ services:
       - .:/var/www/html
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - app
+      - backend
     networks:
       - reminder
 
