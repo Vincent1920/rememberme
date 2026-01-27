@@ -25,9 +25,9 @@ class ReminderTugasMail extends Mailable
     public function build()
     {
         $subject = match ($this->jenis) {
-            '1_jam' => '⏰ Reminder 1 Jam Lagi',
-            '5_menit' => '⚠️ Reminder 5 Menit Lagi',
-            'deadline' => '❗ Deadline Tugas Sekarang',
+            '1_jam' => ' Reminder 1 Jam Lagi',
+            '5_menit' => 'Reminder 5 Menit Lagi',
+            'deadline' => ' Deadline Tugas Sekarang',
         };
 
         return $this->subject($subject)
