@@ -8,17 +8,17 @@
     <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         
         <h1 style="color: #1d4ed8; margin-bottom: 10px;">
-            Halo, {{ $tugas->user->name }} 👋
+            Halo, {{ $tugas->user->name }} 
         </h1>
 
         {{-- Pesan berdasarkan jenis reminder --}}
         @if($jenis === '1_jam')
-            <p>⏰ Tugas Anda akan jatuh tempo <b>1 jam lagi</b>.</p>
+            <p>Tugas Anda akan jatuh tempo <b>1 jam lagi</b>.</p>
         @elseif($jenis === '5_menit')
-            <p>⚠️ Perhatian! Tugas Anda akan jatuh tempo <b>5 menit lagi</b>.</p>
+            <p>Perhatian! Tugas Anda akan jatuh tempo <b>5 menit lagi</b>.</p>
         @elseif($jenis === 'deadline')
             <p style="color: #dc2626; font-weight: bold;">
-                ❗ Deadline tugas telah tiba sekarang!
+                Deadline tugas telah tiba sekarang!
             </p>
         @endif
 

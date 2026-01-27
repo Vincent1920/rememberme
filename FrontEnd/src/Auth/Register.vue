@@ -8,7 +8,7 @@
         @confirm="handleConfirm"
     />
 
-    <div class="min-h-screen flex items-center justify-center bg-gray-100 py-10 px-4">
+    <div class="min-h-screen flex items-center justify-center  py-10 px-4">
         <div class="flex bg-white shadow-xl rounded-[40px] overflow-hidden w-full max-w-5xl">
 
             <div class="w-full lg:w-1/2 bg-[#FFFCE7] p-10 flex flex-col justify-center">

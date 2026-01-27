@@ -7,7 +7,7 @@
         @confirm="handleConfirm"
     />
 
-    <div class="min-h-screen flex items-center justify-center bg-gray-100 px-4 py-10">
+    <div class="min-h-screen flex items-center justify-center px-4 py-10">
         <div class="w-full max-w-5xl bg-white shadow-xl rounded-[40px] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
             
             <div class="bg-[#7EC4E3] flex flex-col items-center justify-center p-10 relative">

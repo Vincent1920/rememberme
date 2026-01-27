@@ -28,7 +28,7 @@
             </div>
 
             <div class="w-full">
-                <label class="block text-sm font-bold text-gray-700 mb-1 px-1">Isi Tugas</label>
+                <label class="block text-sm font-bold text-gray-700 mb-1 px-1">Catatan</label>
                 <textarea v-model="form.task" placeholder="Apa tugasnya?" rows="4"
                     class="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400 text-gray-700 placeholder-gray-400 shadow-sm resize-none"></textarea>
             </div>

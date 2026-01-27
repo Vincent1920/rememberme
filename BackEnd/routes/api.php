@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TugasController;
 
 Route::post('/register', [AuthController::class, 'register']);
@@ -14,7 +15,8 @@ Route::post('/reset-password', [AuthController::class, 'resetPassword']);
 // Route::middleware('auth:sanctum')->post('/Create_Tugas', [TugasController::class, 'CreateTugas']);
 Route::middleware('auth:sanctum')->group(function () {
 
-    Route::put('/update-profile', [AuthController::class, 'updateProfile']);
+    Route::get('/profile', [ProfileController::class, 'getProfile']);
+    Route::post('/profile', [ProfileController::class, 'updateProfile']);
     // tugas
    Route::get('/get-Tugas', [TugasController::class, 'getTugas']);
     Route::post('/Create_Tugas', [TugasController::class, 'CreateTugas']);
